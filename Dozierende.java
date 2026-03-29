@@ -1,17 +1,19 @@
 import java.util.Scanner;
 
-
 public class Dozierende {
-    Scanner scanner = new Scanner (System.in);
+
+Scanner scanner;
 
     private String name;
     private String fakultaet;
     private int bueronummer;
 
-    public Dozierende (String name, String fakultaet, int bueronummer) {
+    public Dozierende (String name, String fakultaet, int bueronummer, Scanner scanner) {
+        
         this.name = name;
         this.fakultaet = fakultaet;
         this.bueronummer = bueronummer;
+        this.scanner = scanner;
     }
 
     public String getName() {
@@ -24,5 +26,9 @@ public class Dozierende {
         System.out.println("Der Dozierende " + Dozentenname + " antwortet dem Studenten: " + studierender.getName());
         String antwort = scanner.nextLine();
         System.out.println(antwort);
+    }
+
+    public void sprechstundenBestaetigen (Studierende studierender, String grund, String wunschtermin) {
+
     }
 }
