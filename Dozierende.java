@@ -49,12 +49,14 @@ ArrayList<String> feedbackListe = new ArrayList<>();
 
     public void feedbackErhalten(Studierende studierender, String feedback, String empfehlung) {
         feedbackListe.add(studierender.getName() + " Sprechstunden Meinung: " + feedback  + " | " +  "Empfehlung: " + empfehlung);
+        System.out.println();
+        System.out.println("------------------------");
         System.out.println("Danke fürs Feedback " + studierender.getName());
 
 }
 
 public void feedbackAnzeigen() {
-    System.out.println("Gesamtes Feedback");
+    System.out.println();
     for (String f : feedbackListe) {
         System.out.println(f);
     }
