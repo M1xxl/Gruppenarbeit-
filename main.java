@@ -9,7 +9,9 @@ public class main {
         Dozierende dozent = new Dozierende("Keine Ahnung"," THI", 204, scanner );
 
         student.frageStellen(dozent);
-
         student.sprechstundenanfrage(dozent);
+        student.feedbackGeben(dozent);
+        dozent.feedbackAnzeigen();
+
     }
 }

@@ -37,12 +37,28 @@ Scanner scanner;
     }
 
     public void sprechstundenanfrage (Dozierende dozierender) {
-        System.out.println("bitte gebe deinen Wunschtermin ein");
+        System.out.println("Benötigen Sie eine Sprechstunde?");
+        System.out.println("Bitte gebe deinen Wunschtermin ein: ");
         String wunschtermin = scanner.nextLine();
-        System.out.println("Bitte gebe deinen Grund für den Termin ein");
+        System.out.println("Bitte gebe deinen Grund für den Termin ein: ");
         String grund = scanner.nextLine();
+        System.out.println("Ihr Wunschtermin ist am: " + wunschtermin);
+        System.out.println("-----------------------------------------------");
 
         dozierender.sprechstundenBestaetigen (this, grund, wunschtermin);
+    }
+
+    public void feedbackGeben(Dozierende dozierender) {
+        System.out.println();
+        System.out.println("Feedback");
+        System.out.println("-   -   -   -");
+        System.out.println("Wie fanden Sie die Sprechstunde: ");
+        String feedback = scanner.nextLine();
+        System.out.println("Würden sie die Sprechstunde weiter empfehlen? ");
+        String empfehlung = scanner.nextLine();
+
+        dozierender.feedbackErhalten(this, feedback, empfehlung);
+
     }
 
 }
